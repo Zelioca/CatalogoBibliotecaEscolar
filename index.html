@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Tag responsavel por tornar responsivo em dispositivos moveis/celulares-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo da Biblioteca Escolar</title>
+    <!--Tag que conecta esse documento html a o arquivo de estilo css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Escolar</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalogo">Catálogo de Livros</a></li>
+                <li><a href="#emprestimo">Solicitar Empréstimo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="catalogo">
+            <h2>Catálogo de Livros</h2>
+            <div class="lista-livros">
+                
+                <article class="livro-card">
+                    <h3>Dom Casmurro</h3>
+                    <p><strong>Autor:</strong> Machado de Assis</p>
+                    <p class="status disponivel">Disponível</p>
+                </article>
+
+                <article class="livro-card">
+                    <h3>O Pequeno Príncipe</h3>
+                    <p><strong>Autor:</strong> Antoine de Saint-Exupéry</p>
+                    <p class="status disponivel">Disponível</p>
+                </article>
+
+                <article class="livro-card">
+                    <h3>Capitães da Areia</h3>
+                    <p><strong>Autor:</strong> Jorge Amado</p>
+                    <p class="status indisponivel">Emprestado</p>
+                </article>
+
+                <article class="livro-card">
+                    <h3>1984</h3>
+                    <p><strong>Autor:</strong> George Orwell</p>
+                    <p class="status disponivel">Disponível</p>
+                </article>
+
+                <article class="livro-card">
+                    <h3>A Hora da Estrela</h3>
+                    <p><strong>Autor:</strong> Clarice Lispector</p>
+                    <p class="status disponivel">Disponível</p>
+                </article>
+
+                <article class="livro-card">
+                    <h3>O Hobbit</h3>
+                    <p><strong>Autor:</strong> J.R.R. Tolkien</p>
+                    <p class="status indisponivel">Emprestado</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="emprestimo">
+            <h2>Solicitar Empréstimo</h2>
+            <p class="aviso-obrigatorio">Os campos marcados com * são obrigatórios.</p>
+            
+            <form action="#" method="post">
+                <div class="campo-form">
+                    <label for="nome-aluno">Nome do Aluno: *</label>
+                    <input type="text" id="nome-aluno" name="nome-aluno" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="turma">Turma: *</label>
+                    <input type="text" id="turma" name="turma" placeholder="Ex: 2º Ano B" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="livro-desejado">Livro Desejado: *</label>
+                    <select id="livro-desejado" name="livro-desejado" required>
+                        <option value="">-- Selecione um livro disponível --</option>
+                        <option value="dom-casmurro">Dom Casmurro</option>
+                        <option value="pequeno-principe">O Pequeno Príncipe</option>
+                        <option value="1984">1984</option>
+                        <option value="hora-da-estrela">A Hora da Estrela</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </section>
+
+    </main>
+    <footer id="contato">
+        <p>&copy; 2026 Biblioteca Escolar - Humberto de Alencar Castelo Branco</p>
+        <p>Endereço:  Rua Rio Piquiri, 160 – Weissópolis, Pinhais – PR, CEP 83322-010</p>
+        <p>Telefone: (41) 3667-5468 - E-mail: pinhaishumberto@seed.pr.gov.br</p>
+        <p>Horário de funcionamento: Segunda a Sexta, das 07h30 às 17h00.</p>
+    </footer>
+</body>
+</html>
+
+<!--
+
+Tarefa 6: Explicar 3 elementos html
+ <nav> (Navegação): Tag Semantica responsavel por separar a parte de navegaçao do site, contendo link e ancoras. Ajuda ao usuario a navegar melhor pelo site, além de servir bem na hora de estilizar junto das outras tags como header, footer.
+
+<label> (Rótulo de elementos): Cria uma legenda descritiva para um local de entrada de dados, como input. Ao utilizar o atributo 'for' com o mesmo valor do id do campo, o rótulo fica vinculado a ele.
+Assim, fica mais facil de identificar oque cada campo significa, ajudando o usuario a entender corretamente oque inserir.
+
+<select> (Lista de Seleção): Cria um menu suspenso dentro do formulário que permite ao usuário escolher uma opção dentre várias predefinidas. No código, ele evita que o aluno digite o nome do livro errado ou tente solicitar um livro que já está emprestado.
+    
+-->
